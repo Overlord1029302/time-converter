@@ -107,7 +107,7 @@
         const fromUnit = document.getElementById("fromUnit").value;
         const toUnit = document.getElementById("toUnit").value;
 
-        // Conversion factors to meters
+       
         const conversionToSeconds = {
             'm': 60,
             's': 1,
@@ -116,13 +116,11 @@
             'cs': 100,
         };
 
-        // Convert from the original unit to meters
         const seconds = value * conversionToSeconds[fromUnit];
 
-        // Now convert from meters to the target unit
+       
         const convertedValue = seconds / conversionToSeconds[toUnit];
 
-        // Display the result
         document.getElementById("result").innerText = `${value} ${fromUnit} is equal to ${convertedValue.toFixed(6)} ${toUnit}`;
     }
 </script>
